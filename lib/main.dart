@@ -1,4 +1,6 @@
 import 'package:app_delivery/src/pages/login/login_page.dart';
+import 'package:app_delivery/src/pages/register/register_page.dart';
+import 'package:app_delivery/src/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +21,11 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Delivery App Flutter',
       initialRoute: 'login',
-      routes: {'login': (BuildContext context) => const LoginPage()},
+      routes: {
+        'login': (BuildContext context) => const LoginPage(),
+        'register': (BuildContext context) => const RegisterPage()
+      },
+      theme: ThemeData(primaryColor: MyColors.primaryColor),
     );
   }
 }
